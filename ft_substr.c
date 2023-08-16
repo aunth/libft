@@ -29,7 +29,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*new_str;
 	unsigned int	index;
 
-	if (len < 2147483647)
+	if (len < 2147483647 && len < get_len_str(s))
 		new_str = (char *)malloc(len + 1);
 	else
 		new_str = (char *)malloc(get_len_str(s) + 1);
